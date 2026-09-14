@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Projects by V Vijay Kiran</title>
+  <meta name="description" content="Projects by V Vijay Kiran, including PACE — a bare-metal RAG pipeline for academic scheduling — and Thodar, a healthcare logistics platform built for the VIT Hackathon.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://example.com/projects.html">
+  <meta name="theme-color" content="#12233d">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Work — V Vijay Kiran">
+  <meta property="og:description" content="Projects in backend engineering and AI: RAG pipelines, FastAPI services, and rapid prototyping.">
+  <meta property="og:url" content="https://example.com/projects.html">
+  <meta property="og:image" content="https://example.com/assets/og-cover.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Work — V Vijay Kiran">
+  <meta name="twitter:description" content="Projects in backend engineering and AI: RAG pipelines, FastAPI services, and rapid prototyping.">
+  <meta name="twitter:image" content="https://example.com/assets/og-cover.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">▣</span> V Vijay Kiran
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero container" aria-labelledby="work-heading">
+      <p class="eyebrow">SELECTED WORK</p>
+      <h1 id="work-heading">Two projects, two different constraints.</h1>
+      <p class="lede">One built for control and correctness over months; the other built to validate an idea in a weekend.</p>
+    </section>
+
+    <section class="section container">
+      <h2 class="visually-hidden">Project list</h2>
+
+      <article class="section" id="pace" aria-labelledby="pace-heading" style="border-bottom: var(--border);">
+        <div class="section-head">
+          <h3 id="pace-heading">PACE — Personalized Academic Calendar and Events</h3>
+          <span class="section-num">SHEET 01 — In progress</span>
+        </div>
+        <figure>
+          <img src="https://placehold.co/900x420/12233d/fbf9f4?text=PACE" alt="Diagram placeholder representing the PACE backend architecture: a FastAPI service connected to a PostgreSQL database with pgvector.">
+          <figcaption>Backend architecture: FastAPI service, PostgreSQL with pgvector, and a direct RAG pipeline against campus data.</figcaption>
+        </figure>
+        <p>PACE queries fragmented campus data — timetables, notices, event listings — through a single backend REST API. Rather than reaching for an orchestration framework like LangChain, I architected the FastAPI service to handle request and response logic directly, keeping full control over how retrieval and generation are wired together.</p>
+        <p>The retrieval layer is a bare-metal RAG pipeline: the Gemini API produces embeddings, and similarity search runs as raw SQL against pgvector using cosine similarity — no vector-database abstraction sitting in between.</p>
+        <ul class="tag-list" aria-label="Technologies used">
+          <li>FastAPI</li>
+          <li>PostgreSQL</li>
+          <li>pgvector</li>
+          <li>Gemini API</li>
+          <li>Python</li>
+        </ul>
+        <p style="margin-top: var(--space-2);">
+          <a class="btn" href="https://github.com/VK210607/PACE" target="_blank" rel="noopener">View on GitHub<span class="visually-hidden"> (opens in a new tab)</span></a>
+        </p>
+      </article>
+
+      <article class="section" id="thodar" aria-labelledby="thodar-heading">
+        <div class="section-head">
+          <h3 id="thodar-heading">Thodar</h3>
+          <span class="section-num">SHEET 02 — VIT Hackathon, Finalist</span>
+        </div>
+        <figure>
+          <img src="https://placehold.co/900x420/1e5aa8/fbf9f4?text=Thodar" alt="Diagram placeholder representing the Thodar healthcare logistics concept: supply routes connecting rural clinics to a central dispatch hub.">
+          <figcaption>Thodar's concept: closing last-mile gaps in medical supply coordination between clinics and dispatch.</figcaption>
+        </figure>
+        <p>Thodar is a healthcare logistics platform concept addressing gaps in last-mile medical supply coordination — getting the right supplies to clinics that need them, when they need them. I conceptualized and pitched the idea as a Finalist entry at the VIT Hackathon.</p>
+        <p>With hackathon time constraints in play, I used rapid AI-assisted prototyping — Lovable for the interface scaffold, React for the working layer — to get a functioning concept in front of judges fast enough to validate the idea rather than just describe it.</p>
+        <ul class="tag-list" aria-label="Technologies used">
+          <li>React</li>
+          <li>Lovable</li>
+          <li>Rapid Prototyping</li>
+        </ul>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="titleblock">
+        <div>
+          <dt>Drawn by</dt>
+          <dd>V Vijay Kiran</dd>
+        </div>
+        <div>
+          <dt>Sheet</dt>
+          <dd>Work — 03 of 04</dd>
+        </div>
+        <div>
+          <dt>Revision</dt>
+          <dd>Rev. 2026.09</dd>
+        </div>
+        <div class="footer-links">
+          <dt>Sitemap</dt>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav aria-label="Social media">
+        <ul class="social-links">
+          <li><a href="https://github.com/VK210607" rel="me noopener" target="_blank">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/in/v-vijaykiran210607/" rel="me noopener" target="_blank">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        </ul>
+      </nav>
+      <p><small>&copy; 2026 V Vijay Kiran. All rights reserved.</small></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

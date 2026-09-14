@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — V Vijay Kiran</title>
+  <meta name="description" content="Get in touch with V Vijay Kiran about backend engineering, AI, and RAG systems projects. Contact form, email, and social links.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://example.com/contact.html">
+  <meta name="theme-color" content="#12233d">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — V Vijay Kiran">
+  <meta property="og:description" content="Get in touch about backend engineering, AI, and RAG systems projects.">
+  <meta property="og:url" content="https://example.com/contact.html">
+  <meta property="og:image" content="https://example.com/assets/og-cover.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — V Vijay Kiran">
+  <meta name="twitter:description" content="Get in touch about backend engineering, AI, and RAG systems projects.">
+  <meta name="twitter:image" content="https://example.com/assets/og-cover.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">▣</span> V Vijay Kiran
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Work</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero container" aria-labelledby="contact-heading">
+      <p class="eyebrow">CONTACT</p>
+      <h1 id="contact-heading">Open to internships, collaborations, and interesting problems.</h1>
+      <p class="lede">Fill out the form below, or reach me directly through the details in the sidebar. I reply within two business days.</p>
+    </section>
+
+    <div class="container" style="display:grid; grid-template-columns: 2fr 1fr; gap: 2.5rem; align-items: start; padding-block: var(--space-5);">
+
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading" class="visually-hidden">Contact form</h2>
+
+        <form id="contact-form" class="form-grid" novalidate>
+
+          <!-- Honeypot field: hidden from sighted and AT users, catches bots -->
+          <div class="honeypot" aria-hidden="true">
+            <label for="company_website">Leave this field blank</label>
+            <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <fieldset>
+            <legend>Your details</legend>
+
+            <div class="field" data-invalid="false">
+              <label for="name">Full name <span class="required-flag" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+                aria-required="true"
+                aria-describedby="name-error"
+              >
+              <p class="error-msg" id="name-error" role="alert"></p>
+            </div>
+
+            <div class="field" data-invalid="false">
+              <label for="email">Email address <span class="required-flag" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+                aria-required="true"
+                aria-describedby="email-hint email-error"
+              >
+              <p class="hint" id="email-hint">I'll reply to this address only — never shared or added to a list.</p>
+              <p class="error-msg" id="email-error" role="alert"></p>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>What's this about? (optional)</legend>
+            <div class="radio-group" role="radiogroup" aria-label="Reason for contact">
+              <div class="option">
+                <input type="radio" id="reason-internship" name="reason" value="internship">
+                <label for="reason-internship">Internship opportunity</label>
+              </div>
+              <div class="option">
+                <input type="radio" id="reason-project" name="reason" value="project">
+                <label for="reason-project">Project collaboration</label>
+              </div>
+              <div class="option">
+                <input type="radio" id="reason-hackathon" name="reason" value="hackathon">
+                <label for="reason-hackathon">Hackathon / team-up</label>
+              </div>
+              <div class="option">
+                <input type="radio" id="reason-other" name="reason" value="other">
+                <label for="reason-other">Something else</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your message</legend>
+            <div class="field" data-invalid="false">
+              <label for="message">Message <span class="required-flag" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+                aria-required="true"
+                aria-describedby="message-hint message-error"
+              ></textarea>
+              <p class="hint" id="message-hint">A sentence or two is plenty to start.</p>
+              <p class="error-msg" id="message-error" role="alert"></p>
+            </div>
+          </fieldset>
+
+          <div>
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </div>
+
+          <p
+            id="form-status"
+            class="form-status"
+            role="status"
+            aria-live="polite"
+            data-visible="false"
+          ></p>
+        </form>
+      </section>
+
+      <aside aria-labelledby="direct-heading">
+        <div class="callout">
+          <h2 id="direct-heading">Direct contact</h2>
+          <address>
+            <p>
+              Email:<br>
+              <a href="mailto:vijaykiran2106@gmail.com">vijaykiran2106@gmail.com</a>
+            </p>
+            <p>
+              Phone:<br>
+              <a href="tel:+916382184537">+91 63821 84537</a>
+            </p>
+            <p>
+              Location:<br>
+              Chennai, Tamil Nadu, India
+            </p>
+          </address>
+          <nav aria-label="Social media">
+            <ul class="social-links" style="margin-top: 0.5rem;">
+              <li><a href="https://github.com/VK210607" rel="me noopener" target="_blank" style="color:var(--ink); border-color:var(--ink);">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+              <li><a href="https://www.linkedin.com/in/v-vijaykiran210607/" rel="me noopener" target="_blank" style="color:var(--ink); border-color:var(--ink);">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="titleblock">
+        <div>
+          <dt>Drawn by</dt>
+          <dd>V Vijay Kiran</dd>
+        </div>
+        <div>
+          <dt>Sheet</dt>
+          <dd>Contact — 04 of 04</dd>
+        </div>
+        <div>
+          <dt>Revision</dt>
+          <dd>Rev. 2026.09</dd>
+        </div>
+        <div class="footer-links">
+          <dt>Sitemap</dt>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav aria-label="Social media">
+        <ul class="social-links">
+          <li><a href="https://github.com/VK210607" rel="me noopener" target="_blank">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/in/v-vijaykiran210607/" rel="me noopener" target="_blank">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        </ul>
+      </nav>
+      <p><small>&copy; 2026 V Vijay Kiran. All rights reserved.</small></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
